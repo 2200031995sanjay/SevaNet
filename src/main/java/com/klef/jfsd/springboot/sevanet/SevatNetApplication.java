@@ -8,7 +8,7 @@ public class SevatNetApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SevatNetApplication.class, args);
-		System.out.println("Sevnet Portal Is Running...");
+		System.out.println("Sevnet porttal Is Running...");
 	}
 
 }
