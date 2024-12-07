@@ -210,20 +210,14 @@ String constituency = citizen.getConstituency();
             </select>
         </td>
     </tr>
-<<<<<<< HEAD
+
     <tr>
 <td><label>Image</label></td>
 <td><input type="file" name="issueimage" required="required"/></td>
 </tr>
 
 
-                        
-                        <tr>
-                            <td><label>Created Date</label></td>
-                            <td><input type="date" name="createdDate" placeholder="Enter date of issue" required
-                                    class="form-control" /></td>
-                        </tr>
-=======
+    
                        <tr>
     <td><label>Created Date</label></td>
     <td>
