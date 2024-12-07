@@ -75,4 +75,10 @@ public class CitizenServiceImpl  implements CitizenService
 	        return constituencyRepository.findAll(); // Fetching all constituencies from the database
 	    }
 
+	@Override
+	public List<Issue> trackallissues() {
+		
+		return (List<Issue>) issueRepository.findAll();
+	}
+
 }

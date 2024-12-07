@@ -3,14 +3,16 @@
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-
+import java.sql.Blob;
+import org.springframework.http.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-
+import org.springframework.http.MediaType;
+import org.springframework.web.multipart.MultipartFile;
 import com.klef.jfsd.springboot.sevanet.model.Citizen;
 import com.klef.jfsd.springboot.sevanet.model.Constituency;
 import com.klef.jfsd.springboot.sevanet.model.Issue;
@@ -201,7 +203,7 @@ public class CitizenController
   
 
   @PostMapping("insertissue")
-  public ModelAndView insertIssue(HttpServletRequest request) throws Exception {
+  public ModelAndView insertIssue(HttpServletRequest request,@RequestParam("issueimage") MultipartFile file) throws Exception {
       String msg = null;
       ModelAndView mv = new ModelAndView();
       
@@ -219,7 +221,9 @@ public class CitizenController
           String createdDate = request.getParameter("createdDate");
           String updatedDate = "null";
           String urgencyLevel = request.getParameter("urgencyLevel");
-
+          byte[] bytes = file.getBytes();
+          
+		  Blob blob = new javax.sql.rowset.serial.SerialBlob(bytes);
           
           
           // Create and set attributes for Issue object
@@ -236,6 +240,7 @@ public class CitizenController
           issue.setCreatedDate(createdDate);
           issue.setUpdatedDate(updatedDate);
           issue.setUrgencyLevel(urgencyLevel);
+          issue.setImage(blob);
           
           
           // Save the Issue object using the service
