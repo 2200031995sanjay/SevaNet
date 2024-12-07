@@ -210,6 +210,7 @@ String constituency = citizen.getConstituency();
             </select>
         </td>
     </tr>
+<<<<<<< HEAD
     <tr>
 <td><label>Image</label></td>
 <td><input type="file" name="issueimage" required="required"/></td>
@@ -222,6 +223,14 @@ String constituency = citizen.getConstituency();
                             <td><input type="date" name="createdDate" placeholder="Enter date of issue" required
                                     class="form-control" /></td>
                         </tr>
+=======
+                       <tr>
+    <td><label>Created Date</label></td>
+    <td>
+        <input type="date" name="createdDate" required class="form-control" id="createdDate" />
+    </td>
+</tr>
+>>>>>>> af91de31c972234ed5d79680d1b2057b77d5ebb8
                         <tr class="text-center">
                             <td colspan="2">
                                 <input type="submit" value="Report Issue" class="btn btn-primary" />
@@ -237,6 +246,12 @@ String constituency = citizen.getConstituency();
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8g4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="script.js"> const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));</script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var today = new Date().toISOString().split('T')[0];  
+        document.getElementById("createdDate").setAttribute("min", today);  
+    });
+</script>
 </body>
 </html>
         
