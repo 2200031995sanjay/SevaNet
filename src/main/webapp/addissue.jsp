@@ -230,7 +230,7 @@ String constituency = citizen.getConstituency();
         <input type="date" name="createdDate" required class="form-control" id="createdDate" />
     </td>
 </tr>
->>>>>>> af91de31c972234ed5d79680d1b2057b77d5ebb8
+
                         <tr class="text-center">
                             <td colspan="2">
                                 <input type="submit" value="Report Issue" class="btn btn-primary" />
