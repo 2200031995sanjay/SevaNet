@@ -61,7 +61,7 @@ public class AdminController
 			HttpSession session = request.getSession();
 			session.setAttribute("admin", admin);
 			mv.setViewName("adminhome");
-			session.setMaxInactiveInterval(50000);
+			session.setMaxInactiveInterval(500);
 		}
 		else
 		{

@@ -241,13 +241,27 @@
                             <small class="error" id="addressError"></small>
                         </td>
                     </tr>
-                    <tr>
-                        <td><label for="contact">Contact</label></td>
-                        <td>
-                            <input type="number" id="contact" name="contact" required />
-                            <small class="error" id="contactError"></small>
-                        </td>
-                    </tr>
+                  <tr>
+    <td><label for="contact">Contact</label></td>
+    <td>
+        <div style="display: flex; align-items: center;">
+            <span style="padding: 8px 12px; background-color: #f1f1f1; border: 1px solid #ccc; border-radius: 4px 0 0 4px;">+91</span>
+            <input 
+                type="text" 
+                id="contact" 
+                name="contact" 
+                placeholder="Enter 10-digit number starting with 6-9" 
+                pattern="[6-9][0-9]{9}" 
+                maxlength="10" 
+                required 
+                style="border-radius: 0 4px 4px 0; border-left: none; width: 100%;"
+            />
+        </div>
+        <small class="error" id="contactError"></small>
+        
+    </td>
+</tr>
+
               <tr>
     <td><label for="aadharNumber">Aadhar Number</label></td>
     <td>
@@ -353,6 +367,17 @@
             error.textContent = ""; 
         }
     });
+    document.getElementById('contact').addEventListener('input', function () {
+        const contact = this.value;
+        const error = document.getElementById('contactError');
+
+        if (!/^[6-9][0-9]{9}$/.test(contact)) {
+            error.textContent = "Invalid contact number. It must start with 6-9 and have 10 digits.";
+        } else {
+            error.textContent = "";
+        }
+    });
+
 </script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
