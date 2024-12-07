@@ -265,7 +265,7 @@
               <tr>
     <td><label for="aadharNumber">Aadhar Number</label></td>
     <td>
-        <input type="text" id="aadharNumber" name="aadharNumber" pattern="\d{12}" required />
+        <input type="number" id="aadharNumber" name="aadharNumber" pattern="\d{12}" required />
         <div class="error" id="aadharError"></div>
     </td>
 </tr>
