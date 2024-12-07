@@ -114,8 +114,8 @@ if (dep == null) {
         <!-- Main Content Section -->
           <div class="main">
             <div class="username">
-                <p align="right">Logged in as: <strong><%= department.getName() %></strong></p>
-                <h3 align="center">Welcome, <%= department.getName() %></h3>
+                <p align="right">Logged in as: <strong><%= dep.getName() %></strong></p>
+                <h3 align="center">Welcome, <%= dep.getName() %></h3>
             </div>
 
             <!-- Overview Container: Pie Chart and Calendar -->

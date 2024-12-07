@@ -15,6 +15,7 @@ public Citizen displayCitizenID(int cid);
 
 public String addIssue(Issue issue) ;
 public   List<Issue> trackIssue(String name);
+public List<Issue> trackallissues();
 public List<Issue> trackIssueByAadhar(String aadhar);
 
 

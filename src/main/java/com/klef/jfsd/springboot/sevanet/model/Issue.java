@@ -1,5 +1,6 @@
 package com.klef.jfsd.springboot.sevanet.model;
 
+import java.sql.Blob;
 import java.util.Date;
 
 import jakarta.persistence.Column;
@@ -54,6 +55,10 @@ public class Issue {
 
 	    @Column(name = "urgency_level",nullable = false)
 	    private String urgencyLevel; // e.g., "Immediate", "Soon", "Whenever possible"
+	    
+
+		@Column(name="issue_image",nullable = false)
+	    private Blob image;
 
 		public int getId() {
 			return id;
@@ -159,5 +164,12 @@ public class Issue {
 			this.constituency = constituency;
 		}
 	    
+		public Blob getImage() {
+			return image;
+		}
+		
+		public void setImage(Blob image) {
+			this.image = image;
+		}
 	
 }
