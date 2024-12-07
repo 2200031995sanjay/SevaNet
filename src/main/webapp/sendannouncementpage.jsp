@@ -85,20 +85,24 @@ if (politician == null) {
             </div>
 
             <!-- Announcements Form -->
-            <div class="container mt-4">
-                <h3 class="mb-4">Send Announcements</h3>
-                <form action="sendannouncements" method="post">
-                    <div class="mb-3">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="6" placeholder="Enter your message here" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Announcement</button>
-                </form>
-            </div>
+    <!-- Announcements Form -->
+<div class="container mt-4">
+    <h3 class="mb-4">Send Announcements</h3>
+    <form action="sendannouncements" method="post">
+        <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="6" placeholder="Enter your message here" required></textarea>
+        </div>
+        <!-- Hidden Template -->
+        <input type="hidden" id="template" name="template" value="Dear Citizens,\n\n[Your Message Here]\n\nThank you for your support.\n\nSincerely,\n<%= politician.getName() %>">
+        <button type="submit" class="btn btn-primary">Send Announcement</button>
+    </form>
+</div>
+
         </div>
     </div>
 

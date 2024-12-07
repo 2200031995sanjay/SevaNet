@@ -27,8 +27,7 @@ if(citizen == null){
 
 <body>
     <div class="wrapper">
-        <!-- Sidebar -->
-        <aside id="sidebar">
+   <aside id="sidebar">
             <div class="d-flex">
                 <button class="toggle-btn" type="button">
                     <i class="lni lni-grid-alt"></i>
@@ -38,6 +37,7 @@ if(citizen == null){
                 </div>
             </div>
             <ul class="sidebar-nav">
+                <!-- Sidebar Links -->
                 <li class="sidebar-item">
                     <a href="citizenhome" class="sidebar-link">
                         <i class="lni lni-home"></i>
@@ -52,13 +52,13 @@ if(citizen == null){
                 </li>
                 <li class="sidebar-item">
                     <a href="updatecitizen" class="sidebar-link">
-                        <i class="lni lni-pencil-alt"></i>
+                        <i class="lni lni-pencil"></i>
                         <span>Update Profile</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
                     <a href="addissue" class="sidebar-link">
-                        <i class="lni lni-flag"></i>
+                        <i class="lni lni-bullhorn"></i>
                         <span>Report Issue</span>
                     </a>
                 </li>
@@ -77,30 +77,52 @@ if(citizen == null){
             </div>
         </aside>
 
-        <!-- Main Content Section -->
+  <!-- Main Content Section -->
         <div class="main">
             <h3 class="text-center mb-4"><u>My Profile</u></h3>
 
             <!-- Bootstrap Card for Profile -->
-            <div class="card mx-auto" style="max-width: 600px;">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Citizen Details</h5>
+            <div class="card mx-auto" style="max-width: 600px; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 12px; background-color: #223243;">
+                <div class="card-body" style="padding: 2rem;">
+                    <h5 class="card-title text-center" style="font-size: 1.5rem; color: #ffffff; font-weight: 600;">Citizen Details</h5>
 
                     <!-- Profile Details -->
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><b>ID:</b> <%=citizen.getId()%></li>
-                        <li class="list-group-item"><b>First Name:</b> <%=citizen.getFirstname() %></li>
-                        <li class="list-group-item"><b>Last Name:</b> <%=citizen.getLastname()%></li>
-                        <li class="list-group-item"><b>Email:</b> <%=citizen.getEmail()%></li>
-                        <li class="list-group-item"><b>Address:</b> <%=citizen.getAddress() %></li>
-                        <li class="list-group-item"><b>Contact:</b> <%=citizen.getContact()%></li>
-                        <li class="list-group-item"><b>Aadhar No:</b> <%=citizen.getAadharnumber()%></li>
-                        <li class="list-group-item"><b>Constituency:</b> <%=citizen.getConstituency()%></li>
-                        <li class="list-group-item"><b>Gender:</b> <%=citizen.getGender()%></li>
-                        <li class="list-group-item"><b>Marital Status:</b> <%=citizen.getMaritalstatus()%></li>
+                        <li class="list-group-item d-none" style="font-size: 1rem; padding: 1rem 1.25rem; background-color: #223243; color: #ffffff; border-radius: 8px; margin-bottom: 0.5rem;">
+                            <b>ID:</b> <%=citizen.getId()%>
+                        </li> <!-- Hidden ID field -->
+                        <li class="list-group-item" style="font-size: 1rem; padding: 1rem 1.25rem; background-color: #223243; color: #ffffff; border-radius: 8px; margin-bottom: 0.5rem;">
+                            <b>First Name:</b> <%=citizen.getFirstname() %>
+                        </li>
+                        <li class="list-group-item" style="font-size: 1rem; padding: 1rem 1.25rem; background-color: #223243; color: #ffffff; border-radius: 8px; margin-bottom: 0.5rem;">
+                            <b>Last Name:</b> <%=citizen.getLastname()%>
+                        </li>
+                        <li class="list-group-item" style="font-size: 1rem; padding: 1rem 1.25rem; background-color: #223243; color: #ffffff; border-radius: 8px; margin-bottom: 0.5rem;">
+                            <b>Email:</b> <%=citizen.getEmail()%>
+                        </li>
+                        <li class="list-group-item" style="font-size: 1rem; padding: 1rem 1.25rem; background-color: #223243; color: #ffffff; border-radius: 8px; margin-bottom: 0.5rem;">
+                            <b>Address:</b> <%=citizen.getAddress() %>
+                        </li>
+                        <li class="list-group-item" style="font-size: 1rem; padding: 1rem 1.25rem; background-color: #223243; color: #ffffff; border-radius: 8px; margin-bottom: 0.5rem;">
+                            <b>Contact:</b> <%=citizen.getContact()%>
+                        </li>
+                        <li class="list-group-item" style="font-size: 1rem; padding: 1rem 1.25rem; background-color: #223243; color: #ffffff; border-radius: 8px; margin-bottom: 0.5rem;">
+                            <b>Aadhar No:</b> <%=citizen.getAadharnumber()%>
+                        </li>
+                        <li class="list-group-item" style="font-size: 1rem; padding: 1rem 1.25rem; background-color: #223243; color: #ffffff; border-radius: 8px; margin-bottom: 0.5rem;">
+                            <b>Constituency:</b> <%=citizen.getConstituency()%>
+                        </li>
+                        <li class="list-group-item" style="font-size: 1rem; padding: 1rem 1.25rem; background-color: #223243; color: #ffffff; border-radius: 8px; margin-bottom: 0.5rem;">
+                            <b>Gender:</b> <%=citizen.getGender()%>
+                        </li>
+                        <li class="list-group-item" style="font-size: 1rem; padding: 1rem 1.25rem; background-color: #223243; color: #ffffff; border-radius: 8px; margin-bottom: 0.5rem;">
+                            <b>Marital Status:</b> <%=citizen.getMaritalstatus()%>
+                        </li>
                     </ul>
 
-                    <a href="updatecitizen" class="btn btn-primary w-100 mt-3">Update Profile</a>
+                    <a href="updatecitizen" class="btn btn-primary w-100 mt-3" style="font-size: 1rem; padding: 0.75rem; border-radius: 8px; background-color: #223243; color: white; font-weight: 600; transition: background-color 0.3s ease;">
+                        Update Profile
+                    </a>
                 </div>
             </div>
         </div>
