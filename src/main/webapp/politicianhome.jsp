@@ -201,10 +201,9 @@ if (politician == null) {
 
 
 <!-- Latest News Section -->
-<h4 align="center">Latest News</h4>
 <div class="latest-news d-flex flex-wrap justify-content-center">
     <div class="news-item card text-center mx-2 my-2" style="width: 18rem;">
-        <img src="https://via.placeholder.com/40?text=NDTV" class="card-img-top mx-auto mt-3" alt="NDTV">
+        <img src="ndtv.png" class="card-img-top mx-auto mt-3" alt="NDTV">
         <div class="card-body">
             <h5 class="card-title">NDTV</h5>
             <p class="card-text">Get the latest updates on politics, economy, and society.</p>
@@ -212,7 +211,7 @@ if (politician == null) {
         </div>
     </div>
     <div class="news-item card text-center mx-2 my-2" style="width: 18rem;">
-        <img src="https://via.placeholder.com/40?text=TheHindu" class="card-img-top mx-auto mt-3" alt="The Hindu">
+        <img src="hindhu.jpeg" class="card-img-top mx-auto mt-3" alt="The Hindu">
         <div class="card-body">
             <h5 class="card-title">The Hindu</h5>
             <p class="card-text">Explore the latest news on national and international topics.</p>
@@ -220,7 +219,7 @@ if (politician == null) {
         </div>
     </div>
     <div class="news-item card text-center mx-2 my-2" style="width: 18rem;">
-        <img src="https://via.placeholder.com/40?text=IndiaToday" class="card-img-top mx-auto mt-3" alt="India Today">
+        <img src="indiatoday.png" class="card-img-top mx-auto mt-3" alt="India Today">
         <div class="card-body">
             <h5 class="card-title">India Today</h5>
             <p class="card-text">Breaking news on current affairs and exclusive interviews.</p>
@@ -228,7 +227,7 @@ if (politician == null) {
         </div>
     </div>
     <div class="news-item card text-center mx-2 my-2" style="width: 18rem;">
-        <img src="https://via.placeholder.com/40?text=TOI" class="card-img-top mx-auto mt-3" alt="TOI">
+        <img src="toi.png" class="card-img-top mx-auto mt-3" alt="TOI">
         <div class="card-body">
             <h5 class="card-title">Times of India</h5>
             <p class="card-text">Daily highlights from one of India's leading news portals.</p>
@@ -236,44 +235,48 @@ if (politician == null) {
         </div>
     </div>
     <div class="news-item card text-center mx-2 my-2" style="width: 18rem;">
-        <img src="https://via.placeholder.com/40?text=BBC" class="card-img-top mx-auto mt-3" alt="BBC">
+        <img src="bbc.png" class="card-img-top mx-auto mt-3" alt="BBC">
         <div class="card-body">
             <h5 class="card-title">BBC News</h5>
             <p class="card-text">World news and analysis from the BBC newsroom.</p>
             <a href="https://www.bbc.com/news" target="_blank" class="btn btn-primary">Visit BBC</a>
         </div>
     </div>
-    <div class="news-item card text-center mx-2 my-2" style="width: 18rem;">
-        <img src="https://via.placeholder.com/40?text=CNBC" class="card-img-top mx-auto mt-3" alt="CNBC">
-        <div class="card-body">
-            <h5 class="card-title">CNBC</h5>
-            <p class="card-text">Latest updates on business, economy, and stock markets.</p>
-            <a href="https://www.cnbc.com" target="_blank" class="btn btn-primary">Visit CNBC</a>
-        </div>
+<div class="news-item card text-center mx-2 my-2" style="width: 18rem;">
+    <img src="tv9.png" class="card-img-top mx-auto mt-3" alt="TV9 Telugu">
+    <div class="card-body">
+        <h5 class="card-title">TV9 Telugu</h5>
+        <p class="card-text">Latest news and updates from Andhra Pradesh and Telangana.</p>
+        <a href="https://www.tv9telugu.com" target="_blank" class="btn btn-primary">Visit TV9 Telugu</a>
     </div>
-    <div class="news-item card text-center mx-2 my-2" style="width: 18rem;">
-        <img src="https://via.placeholder.com/40?text=Reuters" class="card-img-top mx-auto mt-3" alt="Reuters">
-        <div class="card-body">
-            <h5 class="card-title">Reuters</h5>
-            <p class="card-text">Breaking international news, in-depth coverage, and global headlines.</p>
-            <a href="https://www.reuters.com" target="_blank" class="btn btn-primary">Visit Reuters</a>
-        </div>
+</div>
+<div class="news-item card text-center mx-2 my-2" style="width: 18rem;">
+    <img src="ntv.png" class="card-img-top mx-auto mt-3" alt="NTV Telugu">
+    <div class="card-body">
+        <h5 class="card-title">NTV Telugu</h5>
+        <p class="card-text">24/7 coverage of news from Telangana, Andhra Pradesh, and beyond.</p>
+        <a href="https://www.ntvtelugu.com" target="_blank" class="btn btn-primary">Visit NTV Telugu</a>
     </div>
-    <div class="news-item card text-center mx-2 my-2" style="width: 18rem;">
-        <img src="https://via.placeholder.com/40?text=HindustanTimes" class="card-img-top mx-auto mt-3" alt="Hindustan Times">
-        <div class="card-body">
-            <h5 class="card-title">Hindustan Times</h5>
-            <p class="card-text">Top stories and in-depth reporting from across the globe.</p>
-            <a href="https://www.hindustantimes.com" target="_blank" class="btn btn-primary">Visit Hindustan Times</a>
-        </div>
+</div>
+<div class="news-item card text-center mx-2 my-2" style="width: 18rem;">
+    <img src="abn.jpeg" class="card-img-top mx-auto mt-3" alt="ABN Andhrajyothi">
+    <div class="card-body">
+        <h5 class="card-title">ABN Andhrajyothi</h5>
+        <p class="card-text">News and analysis on politics, business, and entertainment from Andhra Pradesh and Telangana.</p>
+        <a href="https://www.andhrajyothy.com" target="_blank" class="btn btn-primary">Visit ABN Andhrajyothi</a>
     </div>
-    <div class="news-item card text-center mx-2 my-2" style="width: 18rem;">
-        <img src="https://via.placeholder.com/40?text=FinancialExpress" class="card-img-top mx-auto mt-3" alt="Financial Express">
-        <div class="card-body">
-            <h5 class="card-title">Financial Express</h5>
-            <p class="card-text">Focused updates on finance, economy, and market trends.</p>
-            <a href="https://www.financialexpress.com" target="_blank" class="btn btn-primary">Visit Financial Express</a>
-        </div>
+</div>
+<div class="news-item card text-center mx-2 my-2" style="width: 18rem;">
+    <img src="tv5.jpeg" class="card-img-top mx-auto mt-3" alt="TV5 Telugu">
+    <div class="card-body">
+        <h5 class="card-title">TV5 Telugu</h5>
+        <p class="card-text">Your source for the latest news from across Andhra Pradesh and Telangana.</p>
+        <a href="https://www.tv5news.in" target="_blank" class="btn btn-primary">Visit TV5 Telugu</a>
+    </div>
+</div>
+
+</div>
+
     </div>
 </div>
 
