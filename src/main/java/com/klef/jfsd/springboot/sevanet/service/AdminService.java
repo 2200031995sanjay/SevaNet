@@ -1,6 +1,7 @@
 package com.klef.jfsd.springboot.sevanet.service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import com.klef.jfsd.springboot.sevanet.model.Admin;
@@ -64,6 +65,6 @@ public interface AdminService
     
     
    
-    
+    public Map<String, Long> getIssueCounts();
 
 }

@@ -1,6 +1,8 @@
 package com.klef.jfsd.springboot.sevanet.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -210,6 +212,22 @@ public class AdminServiceImpl implements AdminService
 		partyRepository.save(par);
 		return "New party Added Succcessfully";
 	}
+
+	@Override
+	public Map<String, Long> getIssueCounts() {
+        // Fetching counts based on issue status
+        long reportedCount = issueRepository.countIssuesByStatus("Reported");
+        long inProgressCount = issueRepository.countIssuesByStatus("In Progress");
+        long resolvedCount = issueRepository.countIssuesByStatus("Resolved");
+
+        // Creating a Map to hold the issue counts
+        Map<String, Long> issueCount = new HashMap<>();
+        issueCount.put("Reported", reportedCount);
+        issueCount.put("In Progress", inProgressCount);
+        issueCount.put("Resolved", resolvedCount);
+
+        return issueCount;
+    }
 
 
 

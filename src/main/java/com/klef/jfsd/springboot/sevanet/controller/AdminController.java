@@ -2,6 +2,7 @@ package com.klef.jfsd.springboot.sevanet.controller;
 
 import java.util.List;
 //import java.util.Optional;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -72,15 +73,43 @@ public class AdminController
 	}
 	
 	@GetMapping("adminhome")
-	public ModelAndView adminhome()
-	{
-		ModelAndView mv = new ModelAndView();
-		
-		
-		
-		mv.setViewName("adminhome");
-		return mv;
-	}
+	  public ModelAndView adminhome(HttpSession session) {
+	      ModelAndView mv = new ModelAndView();
+	      
+	      // Retrieve the logged-in admin from the session
+	      Admin admin = (Admin) session.getAttribute("admin");
+
+	      // If the admin is not logged in, redirect to the session expiry page
+	      if (admin == null) {
+	          mv.setViewName("adminsessionexpiry");
+	          return mv;
+	      }
+
+	      // Fetch counts for politicians, departments, and citizens
+	      long politicianCount = adminService.politicianscount();
+	      long departmentCount = adminService.departmentscount();
+	      long citizenCount = adminService.citizenscount();
+
+	      // Fetch issue counts (Reported, In Progress, Resolved)
+	      Map<String, Long> issueCounts = adminService.getIssueCounts();
+	      long reportedCount = issueCounts.getOrDefault("Reported", 0L);
+	      long inProgressCount = issueCounts.getOrDefault("In Progress", 0L);
+	      long resolvedCount = issueCounts.getOrDefault("Resolved", 0L);
+
+	      // Add all the counts and the admin username to the model
+	      mv.addObject("polcount", politicianCount);
+	      mv.addObject("deptcount", departmentCount);
+	      mv.addObject("citcount", citizenCount);
+	      mv.addObject("reportedCount", reportedCount);
+	      mv.addObject("inProgressCount", inProgressCount);
+	      mv.addObject("resolvedCount", resolvedCount);
+	      mv.addObject("adminUsername", admin.getUsername());
+
+	      // Set the view name
+	      mv.setViewName("adminhome");
+	      
+	      return mv;
+	  }
 	
 	@GetMapping("/addpolitician")
 	public ModelAndView addpolitician() {
